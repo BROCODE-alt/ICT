@@ -1,0 +1,13 @@
+h1{text-align: center;border-style: double;border-color: crimson;border-width: 2cqb;border-style: dotted;background-color: darksalmon;}
+h2{color: chocolate;}
+h3{color: chocolate;}
+h4{color: chocolate;}
+h5{color: chocolate;}
+img{border-color: black;}
+table,th,tr,td{border-color: tomato;border-width: 8px;}
+.bord{background-color: tomato;
+    border: 5px solid black;
+     border-color: black;
+     border-width: 5px;
+     margin: 8px;
+     padding: 25px;}
