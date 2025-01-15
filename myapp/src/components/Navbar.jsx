@@ -15,6 +15,12 @@ const Navbar = () => {
             <Link to="/state">
             <Button variant="contained">State</Button>
             </Link>
+            <Link to="/counter">
+            <Button variant="contained">Counter</Button>
+            </Link>
+            <Link to="/name">
+            <Button variant="contained">Name</Button>
+            </Link>
             
         </Toolbar>
       </AppBar>

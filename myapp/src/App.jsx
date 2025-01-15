@@ -7,6 +7,9 @@ import Signup from './components/Signup'
 import Navbar from './components/Navbar'
 import { Route,Routes } from 'react-router-dom'
 import State from './components/state'
+import Counter from './components/Counter'
+import Name from './components/name'
+
 
 
 function App() {
@@ -19,6 +22,8 @@ function App() {
         <Route path="/log" element={<Login/>}/>
         <Route path="/sign" element={<Signup />}/>
         <Route path="/state" element={<State/>}/>
+        <Route path="/counter" element={<Counter/>}/>
+        <Route path="/name" element={<Name/>}/>
        </Routes>
 
       <Navbar />
