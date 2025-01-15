@@ -9,6 +9,7 @@ import { Route,Routes } from 'react-router-dom'
 import State from './components/state'
 import Counter from './components/Counter'
 import Name from './components/name'
+import Api from './components/Api'
 
 
 
@@ -27,6 +28,7 @@ function App() {
        </Routes>
 
       <Navbar />
+      <Api/>
     </div>
   )
 }
