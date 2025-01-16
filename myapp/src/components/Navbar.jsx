@@ -20,7 +20,10 @@ const Navbar = () => {
             </Link>
             <Link to="/name">
             <Button variant="contained">Name</Button>
-            </Link>
+          </Link>
+          <Link to="/api">
+            <Button variant="contained">Api</Button>
+          </Link>
             
         </Toolbar>
       </AppBar>

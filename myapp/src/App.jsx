@@ -18,17 +18,17 @@ function App() {
 
   return (
     <div>
+       <Navbar />
       <h1>CD automotives</h1>
        <Routes>
         <Route path="/log" element={<Login/>}/>
         <Route path="/sign" element={<Signup />}/>
         <Route path="/state" element={<State/>}/>
         <Route path="/counter" element={<Counter/>}/>
-        <Route path="/name" element={<Name/>}/>
+        <Route path="/name" element={<Name />} />
+        <Route path="/api" element={<Api/>}/>
        </Routes>
 
-      <Navbar />
-      <Api/>
     </div>
   )
 }
