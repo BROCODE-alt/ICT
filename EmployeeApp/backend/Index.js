@@ -3,10 +3,15 @@ const express = require("express")
 require("./Connection")
 var EmployeeModel = require("./models/Employ")
 const { Error } = require("mongoose")
+const cors = require("cors")
+
 //initialise
 const app = express()
+
 //middleware
 app.use(express.json())
+app.use(cors())
+
 //api create
 app.get("/", (req, res) => {
     res.send("Hello world")
@@ -14,7 +19,8 @@ app.get("/", (req, res) => {
 app.get("/trial", (req, res) => {
     res.send("trial api")
 })
-//api create
+
+//add
 app.post("/add", async (req, res) => {
     try {
         await new EmployeeModel(req.body).save()
@@ -27,7 +33,7 @@ app.post("/add", async (req, res) => {
 app.get("/view", async (req, res) => {
     try {
         var data = await EmployeeModel.find()
-        res.send({ data })
+        res.send(data)
     } catch (error) {
         console.log(error)
     }
@@ -36,6 +42,7 @@ app.get("/view", async (req, res) => {
 app.listen(3004, () => {
     console.log("server is running on 3004")
 })
+//delete
 app.delete("/remove/:id", async (req, res) => {
     try {
         await EmployeeModel.findByIdAndDelete(req.params.id)
@@ -45,10 +52,11 @@ app.delete("/remove/:id", async (req, res) => {
         console.log(error)
     }
 })
+//update
 app.put("/update/:id", async (req, res) => {
     try {
-        var data=await EmployeeModel.findByIdAndUpdate(req.params.id,req.body)
-        res.send({data})
+        var data = await EmployeeModel.findByIdAndUpdate(req.params.id, req.body)
+        res.send({ data })
     }
     catch (error) {
         console.log(error)
